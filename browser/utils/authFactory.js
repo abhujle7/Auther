@@ -17,6 +17,10 @@ app.factory("AuthFactory", function($http){
  		})
  }
 
+ AuthFactory.logOut = function(){
+ 	console.log("Hit auth factory");
+ 	return $http.put("/api/users/logout")
+ }
 
  return AuthFactory;
 
